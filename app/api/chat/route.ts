@@ -32,8 +32,14 @@ Taisyklės:
 - Naudok struktūruotą formatavimą: sąrašus, žingsnius, paryškintą tekstą
 - Atsakymai turėtų būti vidutinio ilgio - ne per trumpi, ne per ilgi`;
 
+export const dynamic = 'force-dynamic';
+
 export async function POST(request: NextRequest) {
   try {
+    if (!process.env.OPENAI_API_KEY) {
+      return NextResponse.json({ error: 'Serverio konfigūracijos klaida: API raktas nenustatytas' }, { status: 500 });
+    }
+
     const { message, model } = await request.json();
 
     if (!message || typeof message !== 'string') {
@@ -68,6 +74,6 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Per daug užklausų, pabandykite vėliau' }, { status: 429 });
     }
 
-    return NextResponse.json({ error: 'Nepavyko gauti atsakymo' }, { status: 500 });
+    return NextResponse.json({ error: `Klaida: ${message}` }, { status: 500 });
   }
 }
