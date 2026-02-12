@@ -452,7 +452,7 @@ export default function SpecialistChat() {
   );
 
   return (
-    <div style={{ padding: '28px 32px', maxWidth: '1400px', margin: '0 auto' }} className="flex gap-6 h-[calc(100vh-8rem)]">
+    <div style={{ maxWidth: '1400px', margin: '0 auto' }} className="p-4 md:p-7 pt-14 lg:pt-7 flex flex-col lg:flex-row gap-4 lg:gap-6 min-h-[calc(100vh-5rem)] lg:h-[calc(100vh-8rem)]">
       {/* Main Chat Area */}
       <div className="flex-1 flex flex-col card rounded-2xl overflow-hidden" style={{ border: '1px solid #e5e7eb' }}>
         {/* Header */}
@@ -544,7 +544,7 @@ export default function SpecialistChat() {
       </div>
 
       {/* Right Sidebar */}
-      <div className="w-80 space-y-6">
+      <div className="hidden lg:block lg:w-80 space-y-6">
         {/* Online Users */}
         <div className="card rounded-2xl p-6" style={{ border: '1px solid #e5e7eb' }}>
           <div className="flex items-center gap-2 mb-4">

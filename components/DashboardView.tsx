@@ -39,9 +39,9 @@ export default function DashboardView() {
   const monthName = ['Sausio', 'Vasario', 'Kovo', 'Balandžio', 'Gegužės', 'Birželio', 'Liepos', 'Rugpjūčio', 'Rugsėjo', 'Spalio', 'Lapkričio', 'Gruodžio'][today.getMonth()];
 
   return (
-    <div style={{ padding: '28px 32px', maxWidth: '1400px', margin: '0 auto' }}>
+    <div className="p-4 md:px-8 md:py-7 pt-14 lg:pt-0" style={{ maxWidth: '1400px', margin: '0 auto' }}>
       {/* ===== TOP BAR ===== */}
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', marginBottom: '20px' }}>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
         <div className="card animate-fade-in-up stagger-1" style={{ padding: '24px 28px', display: 'flex', alignItems: 'center', gap: '20px' }}>
           <div style={{ width: '56px', height: '56px', borderRadius: '50%', background: '#111', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '22px', fontWeight: '800' }}>
             {today.getDate()}
@@ -57,10 +57,10 @@ export default function DashboardView() {
 
         <div className="card animate-fade-in-up stagger-2" style={{ padding: '24px 28px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <div>
-            <div style={{ fontSize: '24px', fontWeight: '800', color: '#111', lineHeight: '1.2' }}>
+            <div className="text-lg md:text-2xl" style={{ fontWeight: '800', color: '#111', lineHeight: '1.2' }}>
               Sveiki! Reikia pagalbos? <span style={{ fontSize: '28px' }}>👋</span>
             </div>
-            <div style={{ fontSize: '15px', color: '#999', marginTop: '4px' }}>Tiesiog klauskite!</div>
+            <div className="text-sm md:text-base" style={{ color: '#999', marginTop: '4px' }}>Tiesiog klauskite!</div>
           </div>
           <button style={{ width: '48px', height: '48px', borderRadius: '50%', border: '2px solid #E0E0E6', background: 'white', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <Mic size={20} style={{ color: '#111' }} />
@@ -69,7 +69,7 @@ export default function DashboardView() {
       </div>
 
       {/* ===== STATS ROW ===== */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '20px', marginBottom: '20px' }}>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-5">
         {/* Klausimai */}
         <div className="card animate-fade-in-up stagger-3" style={{ padding: '24px 28px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px' }}>
@@ -154,7 +154,7 @@ export default function DashboardView() {
       </div>
 
       {/* ===== BOTTOM ROW ===== */}
-      <div style={{ display: 'grid', gridTemplateColumns: '280px 1fr 300px', gap: '20px' }}>
+      <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr_300px] gap-5">
         {/* Populiariausi modeliai */}
         <div className="card animate-fade-in-up stagger-7" style={{ padding: '24px' }}>
           <h3 style={{ fontSize: '15px', fontWeight: '700', color: '#111', marginBottom: '20px' }}>Populiariausi modeliai</h3>

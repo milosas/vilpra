@@ -348,11 +348,11 @@ export default function ProblemsView() {
   };
 
   return (
-    <div style={{ padding: '28px 32px', maxWidth: '1400px', margin: '0 auto' }}>
+    <div className="p-4 md:p-7 pt-14 lg:pt-7" style={{ maxWidth: '1400px', margin: '0 auto' }}>
       <div className="space-y-6">
         {/* Header */}
         <div className="space-y-2">
-          <h1 className="text-3xl font-bold" style={{ color: '#1a1a1a' }}>Dažniausiai pasitaikančios problemos</h1>
+          <h1 className="text-xl md:text-3xl font-bold" style={{ color: '#1a1a1a' }}>Dažniausiai pasitaikančios problemos</h1>
           <p style={{ color: '#6b7280' }}>
             Išsami informacija apie tipines šilumos siurblių problemas ir jų sprendimus
           </p>
@@ -475,7 +475,7 @@ export default function ProblemsView() {
                   borderLeft: `4px solid ${severityColors.text}`
                 }}
               >
-                <div className="p-6 space-y-4">
+                <div className="p-4 md:p-6 space-y-4">
                   {/* Header */}
                   <div className="flex items-start gap-3">
                     <div

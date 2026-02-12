@@ -38,17 +38,17 @@ export default function LoginPage() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full blur-3xl animate-pulse-slow" style={{ backgroundColor: 'rgba(224, 122, 95, 0.04)', animationDelay: '1s' }} />
 
       {/* Login card */}
-      <div className="relative z-10 w-full max-w-md px-6">
-        <div className="card p-8 animate-fade-in" style={{ backgroundColor: 'white', boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)' }}>
+      <div className="relative z-10 w-full max-w-md px-4 md:px-6">
+        <div className="card p-5 md:p-8 animate-fade-in" style={{ backgroundColor: 'white', boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)' }}>
           {/* Logo and branding */}
           <div className="text-center mb-8">
             <div className="inline-block">
-              <h1 className="text-5xl font-bold mb-2" style={{ color: '#1a1a1a', letterSpacing: '0.02em' }}>
+              <h1 className="text-3xl md:text-5xl font-bold mb-2" style={{ color: '#1a1a1a', letterSpacing: '0.02em' }}>
                 VILPRA
               </h1>
               <div className="h-1 w-full rounded-full" style={{ background: 'linear-gradient(to right, #E07A5F, #F4A589)' }} />
             </div>
-            <p className="text-xl font-medium mt-4" style={{ color: '#4b5563' }}>Akademija</p>
+            <p className="text-lg md:text-xl font-medium mt-3 md:mt-4" style={{ color: '#4b5563' }}>Akademija</p>
             <p className="text-sm mt-2" style={{ color: '#9ca3af' }}>Šilumos siurblių specialistų platforma</p>
           </div>
 

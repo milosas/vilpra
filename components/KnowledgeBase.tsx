@@ -751,11 +751,11 @@ export default function KnowledgeBase() {
 
   if (selectedModel) {
     return (
-      <div style={{ padding: '28px 32px', maxWidth: '1400px', margin: '0 auto' }} className="space-y-6">
+      <div className="p-4 md:p-7 pt-14 lg:pt-7 space-y-6" style={{ maxWidth: '1400px', margin: '0 auto' }}>
         {/* Header with Back Button */}
-        <div className="card rounded-2xl p-6" style={{ border: '1px solid #e5e7eb' }}>
-          <div className="flex items-center justify-between mb-4">
-            <div className="flex items-center gap-4">
+        <div className="card rounded-2xl p-4 md:p-6" style={{ border: '1px solid #e5e7eb' }}>
+          <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
+            <div className="flex flex-wrap items-center gap-3 md:gap-4">
               <button
                 onClick={() => {
                   setSelectedModel(null);
@@ -777,8 +777,8 @@ export default function KnowledgeBase() {
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold" style={{ color: '#1a1a1a' }}>{selectedModel.model}</h2>
-                <p style={{ color: '#6b7280' }}>
+                <h2 className="text-xl md:text-2xl font-bold" style={{ color: '#1a1a1a' }}>{selectedModel.model}</h2>
+                <p className="text-sm md:text-base" style={{ color: '#6b7280' }}>
                   {selectedModel.type} • {selectedModel.powerRange} • {selectedModel.refrigerant}
                 </p>
               </div>
@@ -793,7 +793,7 @@ export default function KnowledgeBase() {
           </div>
 
           {/* Tabs */}
-          <div className="flex gap-2">
+          <div className="flex overflow-x-auto flex-nowrap whitespace-nowrap gap-2">
             <button
               onClick={() => setActiveTab('specs')}
               className={`px-4 py-2 rounded-lg font-medium transition-all ${
@@ -850,7 +850,7 @@ export default function KnowledgeBase() {
         </div>
 
         {/* Tab Content */}
-        <div className="card rounded-2xl p-6" style={{ border: '1px solid #e5e7eb' }}>
+        <div className="card rounded-2xl p-4 md:p-6" style={{ border: '1px solid #e5e7eb' }}>
           {activeTab === 'specs' && (
             <div>
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2" style={{ color: '#1a1a1a' }}>
@@ -858,7 +858,7 @@ export default function KnowledgeBase() {
                 Techninės Specifikacijos
               </h3>
 
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="rounded-xl p-4" style={{ backgroundColor: '#f9fafb', border: '1px solid #e5e7eb' }}>
                   <div className="flex items-center gap-2 mb-2">
                     <Zap className="w-4 h-4" style={{ color: '#f59e0b' }} />
@@ -1066,9 +1066,9 @@ export default function KnowledgeBase() {
   }
 
   return (
-    <div style={{ padding: '28px 32px', maxWidth: '1400px', margin: '0 auto' }} className="space-y-6">
+    <div className="p-4 md:p-7 pt-14 lg:pt-7 space-y-6" style={{ maxWidth: '1400px', margin: '0 auto' }}>
       {/* Header */}
-      <div className="card rounded-2xl p-6" style={{ border: '1px solid #e5e7eb' }}>
+      <div className="card rounded-2xl p-4 md:p-6" style={{ border: '1px solid #e5e7eb' }}>
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ backgroundColor: '#8b5cf6' }}>
@@ -1104,7 +1104,7 @@ export default function KnowledgeBase() {
             style={{ border: '1px solid #e5e7eb' }}
           >
             {/* Card Header */}
-            <div className="p-6 pb-4">
+            <div className="p-4 md:p-6 pb-4">
               <div className="flex items-start justify-between mb-4">
                 <div
                   className="px-3 py-1.5 rounded-lg text-white font-semibold text-sm"

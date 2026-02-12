@@ -292,10 +292,10 @@ export default function ChatBot() {
   };
 
   return (
-    <div style={{ padding: '28px 32px', maxWidth: '1400px', margin: '0 auto' }} className="flex h-full gap-4">
+    <div style={{ maxWidth: '1400px', margin: '0 auto' }} className="p-4 md:p-7 pt-14 lg:pt-7 flex h-full gap-4">
       {/* Main Chat Area */}
       <div className={`flex flex-col transition-all duration-300 ${
-        showRelatedInfo && currentRelatedInfo.length > 0 ? 'w-2/3' : 'w-full'
+        showRelatedInfo && currentRelatedInfo.length > 0 ? 'w-full lg:w-2/3' : 'w-full'
       }`}>
         {/* Header */}
         <div className="bg-white border border-gray-200 rounded-xl p-4 mb-4 shadow-sm">
@@ -317,7 +317,7 @@ export default function ChatBot() {
                 className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg text-[#1a1a1a] hover:border-[#E07A5F] hover:shadow-sm transition-all duration-200"
               >
                 <Settings className="w-4 h-4 text-[#E07A5F]" />
-                <span className="text-sm font-medium max-w-[200px] truncate">{selectedModel}</span>
+                <span className="text-sm font-medium max-w-[120px] md:max-w-[200px] truncate">{selectedModel}</span>
                 <ChevronDown className={`w-4 h-4 text-[#6b7280] transition-transform duration-200 ${
                   showModelDropdown ? 'rotate-180' : ''
                 }`} />
@@ -366,7 +366,7 @@ export default function ChatBot() {
                 )}
 
                 {/* Message Bubble */}
-                <div className={`flex flex-col max-w-[75%] ${
+                <div className={`flex flex-col max-w-[90%] md:max-w-[75%] ${
                   message.type === 'user' ? 'items-end' : 'items-start'
                 }`}>
                   <div className={`px-4 py-3 rounded-2xl ${
@@ -412,7 +412,7 @@ export default function ChatBot() {
         {/* Input Area */}
         <div className="mt-4 space-y-3">
           {/* Quick Actions */}
-          <div className="flex gap-2 flex-wrap">
+          <div className="flex gap-2 flex-nowrap overflow-x-auto">
             {QUICK_ACTIONS.map((action) => {
               const Icon = action.icon;
               return (
@@ -455,7 +455,7 @@ export default function ChatBot() {
 
       {/* Related Info Sidebar */}
       {showRelatedInfo && currentRelatedInfo.length > 0 && (
-        <div className="w-1/3 animate-fade-in">
+        <div className="hidden lg:block lg:w-1/3 animate-fade-in">
           <div className="bg-white border border-gray-200 rounded-xl p-4 h-full shadow-sm">
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-2">

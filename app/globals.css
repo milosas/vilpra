@@ -255,6 +255,12 @@ body {
   color: #111;
 }
 
+@media (max-width: 767px) {
+  .stat-number {
+    font-size: 1.75rem;
+  }
+}
+
 .stat-label {
   font-size: 0.8rem;
   font-weight: 500;
