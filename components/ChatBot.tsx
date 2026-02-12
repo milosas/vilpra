@@ -172,7 +172,7 @@ export default function ChatBot() {
     {
       id: '1',
       type: 'bot',
-      content: 'Sveiki! Aš esu Vilpra Akademijos AI asistentas. Galiu padėti su šilumos siurblių klausimais - nuo gedimų diagnostikos iki montavimo patarimų. Pasirinkite modelį arba tiesiog klauskite!',
+      content: 'Sveiki! Aš esu Oras-Vanduo Akademijos AI asistentas. Galiu padėti su šilumos siurblių klausimais - nuo gedimų diagnostikos iki montavimo patarimų. Pasirinkite modelį arba tiesiog klauskite!',
       timestamp: new Date(),
     }
   ]);
@@ -305,7 +305,7 @@ export default function ChatBot() {
                 <Bot className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h2 className="text-lg font-semibold text-[#1a1a1a]">Vilpra AI Asistentas</h2>
+                <h2 className="text-lg font-semibold text-[#1a1a1a]">Oras-Vanduo AI Asistentas</h2>
                 <p className="text-sm text-[#6b7280]">Visada pasirengęs padėti</p>
               </div>
             </div>

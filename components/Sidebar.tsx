@@ -81,11 +81,11 @@ export default function Sidebar({ activeTab, onTabChange }: SidebarProps) {
         <div className="p-6 border-b border-gray-100">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-full bg-black flex items-center justify-center shadow-sm">
-              <span className="text-white font-bold text-lg">V</span>
+              <span className="text-white font-bold text-lg">OV</span>
             </div>
             <div>
               <h1 className="text-xl font-bold text-gray-900">
-                VILPRA
+                ORAS-VANDUO
               </h1>
               <p className="text-xs text-gray-500">Akademija</p>
             </div>

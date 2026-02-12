@@ -44,7 +44,7 @@ export default function LoginPage() {
           <div className="text-center mb-8">
             <div className="inline-block">
               <h1 className="text-3xl md:text-5xl font-bold mb-2" style={{ color: '#1a1a1a', letterSpacing: '0.02em' }}>
-                VILPRA
+                ORAS-VANDUO
               </h1>
               <div className="h-1 w-full rounded-full" style={{ background: 'linear-gradient(to right, #E07A5F, #F4A589)' }} />
             </div>
@@ -226,7 +226,7 @@ export default function LoginPage() {
         </div>
 
         <div className="mt-6 text-center">
-          <p className="text-sm" style={{ color: '#6b7280' }}>Platforma skirta Vilpra partneriams ir specialistams</p>
+          <p className="text-sm" style={{ color: '#6b7280' }}>Platforma skirta šilumos siurblių specialistams</p>
         </div>
       </div>
     </div>

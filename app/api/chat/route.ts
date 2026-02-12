@@ -7,7 +7,7 @@ function getOpenAI() {
   });
 }
 
-const SYSTEM_PROMPT = `Tu esi Vilpra Akademijos AI asistentas - ekspertas šilumos siurblių srityje.
+const SYSTEM_PROMPT = `Tu esi Oras-Vanduo Akademijos AI asistentas - ekspertas šilumos siurblių srityje.
 Tavo tikslas - padėti specialistams su šilumos siurblių diagnostika, montavimu, priežiūra ir gedimų šalinimu.
 
 Tu turi žinių apie šiuos modelius:

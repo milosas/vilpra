@@ -5,7 +5,7 @@ export default function ChatBotDemoPage() {
     <div className="min-h-screen bg-dark-bg p-6">
       <div className="max-w-[1600px] mx-auto">
         <div className="mb-6">
-          <h1 className="text-3xl font-bold text-dark-text mb-2">Vilpra AI Asistentas</h1>
+          <h1 className="text-3xl font-bold text-dark-text mb-2">Oras-Vanduo AI Asistentas</h1>
           <p className="text-dark-text-secondary">
             Pokalbių interfeisas su AI asistentu šilumos siurblių specialistams
           </p>

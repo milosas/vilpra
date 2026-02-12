@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Vilpra Akademija - Šilumos Siurblių Specialistų Platforma",
+  title: "Oras-Vanduo Akademija - Šilumos Siurblių Specialistų Platforma",
   description: "Profesionali platforma šilumos siurblių specialistams su AI FAQ botu ir žinių baze",
 };
 
