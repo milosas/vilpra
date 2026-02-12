@@ -12,7 +12,7 @@ import {
   GoogleAuthProvider,
   signOut as firebaseSignOut,
 } from 'firebase/auth';
-import { auth } from './firebase';
+import { getAuthClient } from './firebase';
 
 interface AuthContextType {
   user: User | null;
@@ -42,10 +42,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    const authInstance = getAuthClient();
     // Check for redirect result on page load
-    getRedirectResult(auth).catch(() => {});
+    getRedirectResult(authInstance).catch(() => {});
 
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
+    const unsubscribe = onAuthStateChanged(authInstance, (user) => {
       setUser(user);
       setLoading(false);
     });
@@ -59,7 +60,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       setError(null);
       const provider = new GoogleAuthProvider();
       provider.setCustomParameters({ prompt: 'select_account' });
-      const result = await signInWithPopup(auth, provider);
+      const result = await signInWithPopup(getAuthClient(), provider);
       console.log('Google sign-in success:', result.user.email);
     } catch (err: unknown) {
       const code = (err as { code?: string })?.code || '';
@@ -74,7 +75,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const signInWithEmail = async (email: string, password: string) => {
     try {
       setError(null);
-      await signInWithEmailAndPassword(auth, email, password);
+      await signInWithEmailAndPassword(getAuthClient(), email, password);
     } catch (err: unknown) {
       const message = err instanceof Error ? err.message : 'Prisijungimo klaida';
       if (message.includes('invalid-credential') || message.includes('wrong-password')) {
@@ -92,7 +93,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const signUpWithEmail = async (email: string, password: string) => {
     try {
       setError(null);
-      await createUserWithEmailAndPassword(auth, email, password);
+      await createUserWithEmailAndPassword(getAuthClient(), email, password);
     } catch (err: unknown) {
       const message = err instanceof Error ? err.message : 'Registracijos klaida';
       if (message.includes('email-already-in-use')) {
@@ -108,7 +109,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   const signOut = async () => {
-    await firebaseSignOut(auth);
+    await firebaseSignOut(getAuthClient());
   };
 
   return (
