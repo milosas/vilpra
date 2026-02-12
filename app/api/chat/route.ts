@@ -1,9 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
 import OpenAI from 'openai';
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+function getOpenAI() {
+  return new OpenAI({
+    apiKey: process.env.OPENAI_API_KEY,
+  });
+}
 
 const SYSTEM_PROMPT = `Tu esi Vilpra Akademijos AI asistentas - ekspertas šilumos siurblių srityje.
 Tavo tikslas - padėti specialistams su šilumos siurblių diagnostika, montavimu, priežiūra ir gedimų šalinimu.
@@ -42,7 +44,7 @@ export async function POST(request: NextRequest) {
       ? `[Vartotojas klausia apie modelį: ${model}]\n\n${message}`
       : message;
 
-    const completion = await openai.chat.completions.create({
+    const completion = await getOpenAI().chat.completions.create({
       model: 'gpt-4o-mini',
       messages: [
         { role: 'system', content: SYSTEM_PROMPT },
