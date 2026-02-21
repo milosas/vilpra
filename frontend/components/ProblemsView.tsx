@@ -348,7 +348,7 @@ export default function ProblemsView() {
   };
 
   return (
-    <div className="p-4 md:p-7 pt-14 lg:pt-7" style={{ maxWidth: '1400px', margin: '0 auto' }}>
+    <div className="px-5 md:px-10 lg:px-12 py-6 md:py-8 pt-16 lg:pt-8" style={{ maxWidth: '1400px', margin: '0 auto' }}>
       <div className="space-y-6">
         {/* Header */}
         <div className="space-y-2">

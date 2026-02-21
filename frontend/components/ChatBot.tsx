@@ -292,7 +292,7 @@ export default function ChatBot() {
   };
 
   return (
-    <div style={{ maxWidth: '1400px', margin: '0 auto' }} className="p-4 md:p-7 pt-14 lg:pt-7 flex h-full gap-4">
+    <div style={{ maxWidth: '1400px', margin: '0 auto' }} className="px-5 md:px-10 lg:px-12 py-6 md:py-8 pt-16 lg:pt-8 flex h-full gap-4">
       {/* Main Chat Area */}
       <div className={`flex flex-col transition-all duration-300 ${
         showRelatedInfo && currentRelatedInfo.length > 0 ? 'w-full lg:w-2/3' : 'w-full'

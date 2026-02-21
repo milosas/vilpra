@@ -186,7 +186,7 @@ export default function HistoryView() {
   };
 
   return (
-    <div className="p-4 md:p-7 pt-14 lg:pt-7" style={{ maxWidth: '1400px', margin: '0 auto' }}>
+    <div className="px-5 md:px-10 lg:px-12 py-6 md:py-8 pt-16 lg:pt-8" style={{ maxWidth: '1400px', margin: '0 auto' }}>
       <div className="space-y-6">
         {/* Header */}
         <div className="space-y-2">
@@ -315,17 +315,18 @@ export default function HistoryView() {
         </div>
 
         {/* Conversation List */}
-        <div className="space-y-3">
+        <div className="space-y-4">
           {filteredConversations.map((conversation, index) => {
             const isExpanded = expandedId === conversation.id;
 
             return (
               <div
                 key={conversation.id}
-                className="card rounded-xl overflow-hidden hover:shadow-md transition-all animate-fade-in"
+                className="card rounded-xl overflow-hidden hover:shadow-lg transition-all animate-fade-in"
                 style={{
                   animationDelay: `${index * 50}ms`,
-                  border: '1px solid #e5e7eb'
+                  border: '1px solid #e5e7eb',
+                  boxShadow: '0 1px 3px rgba(0, 0, 0, 0.05)'
                 }}
               >
                 <div
@@ -339,7 +340,7 @@ export default function HistoryView() {
                         {conversation.question}
                       </h3>
                       {!isExpanded && (
-                        <p className="text-sm line-clamp-2" style={{ color: '#6b7280' }}>
+                        <p className="text-sm line-clamp-2 overflow-hidden" style={{ color: '#6b7280', textOverflow: 'ellipsis' }}>
                           {conversation.answer}
                         </p>
                       )}

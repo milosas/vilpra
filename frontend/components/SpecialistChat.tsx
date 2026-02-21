@@ -452,7 +452,7 @@ export default function SpecialistChat() {
   );
 
   return (
-    <div style={{ maxWidth: '1400px', margin: '0 auto' }} className="p-4 md:p-7 pt-14 lg:pt-7 flex flex-col lg:flex-row gap-4 lg:gap-6 min-h-[calc(100vh-5rem)] lg:h-[calc(100vh-8rem)]">
+    <div style={{ maxWidth: '1400px', margin: '0 auto' }} className="px-5 md:px-10 lg:px-12 py-6 md:py-8 pt-16 lg:pt-8 flex flex-col lg:flex-row gap-4 lg:gap-6 min-h-[calc(100vh-5rem)] lg:h-[calc(100vh-8rem)]">
       {/* Main Chat Area */}
       <div className="flex-1 flex flex-col card rounded-2xl overflow-hidden" style={{ border: '1px solid #e5e7eb' }}>
         {/* Header */}
