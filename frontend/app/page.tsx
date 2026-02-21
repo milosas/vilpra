@@ -2,7 +2,6 @@
 
 import { useAuth } from '@/lib/auth-context';
 import { useState } from 'react';
-import LoginPage from '@/components/LoginPage';
 import Sidebar from '@/components/Sidebar';
 import DashboardView from '@/components/DashboardView';
 import ChatBot from '@/components/ChatBot';
@@ -12,7 +11,7 @@ import SpecialistChat from '@/components/SpecialistChat';
 import KnowledgeBase from '@/components/KnowledgeBase';
 
 export default function Home() {
-  const { user, loading } = useAuth();
+  const { loading } = useAuth();
   const [activeTab, setActiveTab] = useState('dashboard');
 
   if (loading) {
@@ -24,10 +23,6 @@ export default function Home() {
         </div>
       </div>
     );
-  }
-
-  if (!user) {
-    return <LoginPage />;
   }
 
   return (
