@@ -751,7 +751,7 @@ export default function KnowledgeBase() {
 
   if (selectedModel) {
     return (
-      <div className="px-5 md:px-10 lg:px-12 py-6 md:py-8 pt-16 lg:pt-8 space-y-6" style={{ maxWidth: '1400px', margin: '0 auto' }}>
+      <div className="space-y-6" style={{ maxWidth: '1200px', margin: '0 auto' }}>
         {/* Header with Back Button */}
         <div className="card rounded-2xl p-4 md:p-6" style={{ border: '1px solid #e5e7eb' }}>
           <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
@@ -1066,7 +1066,7 @@ export default function KnowledgeBase() {
   }
 
   return (
-    <div className="px-5 md:px-10 lg:px-12 py-6 md:py-8 pt-16 lg:pt-8 space-y-6" style={{ maxWidth: '1400px', margin: '0 auto' }}>
+    <div className="space-y-6" style={{ maxWidth: '1200px', margin: '0 auto' }}>
       {/* Header */}
       <div className="card rounded-2xl p-4 md:p-6" style={{ border: '1px solid #e5e7eb' }}>
         <div className="flex items-center justify-between mb-4">

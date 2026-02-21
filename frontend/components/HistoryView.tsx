@@ -186,7 +186,7 @@ export default function HistoryView() {
   };
 
   return (
-    <div className="px-5 md:px-10 lg:px-12 py-6 md:py-8 pt-16 lg:pt-8" style={{ maxWidth: '1400px', margin: '0 auto' }}>
+    <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
       <div className="space-y-6">
         {/* Header */}
         <div className="space-y-2">

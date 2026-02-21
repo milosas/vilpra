@@ -39,7 +39,7 @@ export default function DashboardView() {
   const monthName = ['Sausio', 'Vasario', 'Kovo', 'Balandžio', 'Gegužės', 'Birželio', 'Liepos', 'Rugpjūčio', 'Rugsėjo', 'Spalio', 'Lapkričio', 'Gruodžio'][today.getMonth()];
 
   return (
-    <div className="px-5 md:px-10 lg:px-12 py-6 md:py-8 pt-16 lg:pt-8" style={{ maxWidth: '1400px', margin: '0 auto' }}>
+    <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
       {/* ===== TOP BAR ===== */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
         <div className="card animate-fade-in-up stagger-1" style={{ padding: '24px 28px', display: 'flex', alignItems: 'center', gap: '20px' }}>
