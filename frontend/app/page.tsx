@@ -29,7 +29,7 @@ export default function Home() {
     <div className="flex min-h-screen">
       <Sidebar activeTab={activeTab} onTabChange={setActiveTab} />
 
-      <main className="flex-1 overflow-y-auto">
+      <main className="flex-1 min-w-0 overflow-y-auto overflow-x-hidden">
         {activeTab === 'dashboard' && <DashboardView />}
         {activeTab === 'faq-bot' && <ChatBot />}
         {activeTab === 'history' && <HistoryView />}
