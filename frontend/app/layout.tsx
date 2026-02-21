@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="lt">
       <body className={`${inter.variable} antialiased bg-bg min-h-screen`}>
         {/* BlinGO Agency Header Banner */}
-        <div className="bg-black py-2 px-4">
+        <div className="bg-black py-2 px-4 sticky top-0 z-50">
           <a
             href="http://www.blingo.lt"
             target="_blank"
