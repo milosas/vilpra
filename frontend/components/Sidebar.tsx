@@ -60,10 +60,11 @@ export default function Sidebar({ activeTab, onTabChange }: SidebarProps) {
       {/* Sidebar */}
       <aside
         className={`
-          fixed lg:sticky top-0 left-0 h-screen w-[260px] bg-white border-r border-gray-200 z-40
+          fixed lg:sticky top-0 left-0 w-[260px] bg-white border-r border-gray-200 z-40
           flex flex-col transition-transform duration-300 ease-in-out
           ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
         `}
+        style={{ height: 'calc(100vh - 40px)' }}
       >
         {/* Logo area */}
         <div className="p-6 border-b border-gray-100">
